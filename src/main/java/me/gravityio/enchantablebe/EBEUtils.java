@@ -1,4 +1,4 @@
-package me.gravityio.enchantablebe.random;
+package me.gravityio.enchantablebe;
 
 import me.gravityio.enchantablebe.mixins.interfaces.IEnchantableBE;
 import net.minecraft.block.entity.BlockEntity;
@@ -15,7 +15,7 @@ import java.util.function.Function;
 /**
  * Utilities to make block entities Glint
  */
-public class EBUtils {
+public class EBEUtils {
 
     public static <T extends BlockEntity> VertexConsumer getVertexConsumer(SpriteIdentifier identifier, VertexConsumerProvider provider, Function<Identifier, RenderLayer> layerFactory, T blockEntity) {
         return shouldGlint(blockEntity) ? identifier.getSprite().getTextureSpecificVertexConsumer(ItemRenderer.getDirectItemGlintConsumer(provider, identifier.getRenderLayer(layerFactory), false, true)) : identifier.getVertexConsumer(provider, layerFactory);
