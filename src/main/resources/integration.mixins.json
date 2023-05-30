@@ -1,0 +1,12 @@
+{
+  "required": false,
+  "minVersion": "0.8",
+  "package": "me.gravityio.enchantablebe.mixins.integration",
+  "compatibilityLevel": "JAVA_17",
+  "client": [
+    "ReinfShulkerBoxBlockEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

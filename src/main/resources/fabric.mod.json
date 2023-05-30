@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "enchantable-be",
+  "version": "${version}",
+  "name": "Enchantable Block Entities",
+  "description": "Library",
+  "license": "All-Rights-Reserved",
+  "environment": "*",
+  "mixins": [
+    "enchantable-be.mixins.json",
+    "integration.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.18",
+    "minecraft": "${minecraft_version}"
+  },
+  "conflicts": {
+    "connectivity": "*",
+    "enhancedblockentities": "*",
+    "entity_texture_features": "*"
+  }
+}

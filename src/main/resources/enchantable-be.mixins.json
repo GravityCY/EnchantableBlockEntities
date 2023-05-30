@@ -1,0 +1,19 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "me.gravityio.enchantablebe.mixins.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "AbstractBlockMixin",
+    "BEEntityMixin",
+    "EnchantmentHelperMixin",
+    "ItemStackMixin"
+  ],
+  "client": [
+    "client.BuiltInModelRendererMixin",
+    "client.ShulkerBoxEntityRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
