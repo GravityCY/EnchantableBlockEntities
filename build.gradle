@@ -22,9 +22,11 @@ dependencies {
     minecraft("com.mojang:minecraft:$project.minecraft_version")
     mappings("net.fabricmc:yarn:$project.yarn_mappings:v2")
     modImplementation("net.fabricmc:fabric-loader:$project.loader_version")
+
     modCompileOnly("atonkish.reinfshulker:reinforced-shulker-boxes:${project.reinf_shulker_version}") {
         transitive = false
     }
+
     modLocalRuntime("maven.modrinth:lazydfu:0.1.3")
 }
 

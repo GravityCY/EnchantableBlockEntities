@@ -20,7 +20,7 @@ public class EBEUtils {
     public static boolean doGlint = true;
 
     public static <T extends BlockEntity> VertexConsumer getVertexConsumer(SpriteIdentifier sprite, VertexConsumerProvider provider, Function<Identifier, RenderLayer> layerFactory, T blockEntity) {
-        if (shouldGlint(blockEntity))
+        if (doGlint && shouldGlint(blockEntity))
             return sprite.getSprite().getTextureSpecificVertexConsumer(ItemRenderer.getDirectItemGlintConsumer(provider, sprite.getRenderLayer(layerFactory), false, true));
         return sprite.getVertexConsumer(provider, layerFactory);
     }
