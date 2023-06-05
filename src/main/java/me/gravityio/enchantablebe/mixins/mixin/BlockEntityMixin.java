@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
  * Makes all {@link BlockEntity BlockEntities} implement IEnchantableBlock
  */
 @Mixin(BlockEntity.class)
-public class BEEntityMixin implements IEnchantableBE {
+public class BlockEntityMixin implements IEnchantableBE {
 
     private NbtList enchantments = new NbtList();
 

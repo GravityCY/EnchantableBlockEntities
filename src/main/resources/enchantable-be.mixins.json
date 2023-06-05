@@ -5,7 +5,7 @@
   "compatibilityLevel": "JAVA_17",
   "mixins": [
     "AbstractBlockMixin",
-    "BEEntityMixin",
+    "BlockEntityMixin",
     "EnchantmentHelperMixin",
     "ItemStackMixin"
   ],

@@ -17,12 +17,15 @@ import java.util.function.Function;
  */
 public class EBEUtils {
 
-    public static <T extends BlockEntity> VertexConsumer getVertexConsumer(SpriteIdentifier identifier, VertexConsumerProvider provider, Function<Identifier, RenderLayer> layerFactory, T blockEntity) {
-        return shouldGlint(blockEntity) ? identifier.getSprite().getTextureSpecificVertexConsumer(ItemRenderer.getDirectItemGlintConsumer(provider, identifier.getRenderLayer(layerFactory), false, true)) : identifier.getVertexConsumer(provider, layerFactory);
+    public static boolean doGlint = true;
+
+    public static <T extends BlockEntity> VertexConsumer getVertexConsumer(SpriteIdentifier sprite, VertexConsumerProvider provider, Function<Identifier, RenderLayer> layerFactory, T blockEntity) {
+        if (shouldGlint(blockEntity))
+            return sprite.getSprite().getTextureSpecificVertexConsumer(ItemRenderer.getDirectItemGlintConsumer(provider, sprite.getRenderLayer(layerFactory), false, true));
+        return sprite.getVertexConsumer(provider, layerFactory);
     }
 
     public static <T extends BlockEntity> boolean shouldGlint(T blockEntity) {
-        if (!(blockEntity instanceof IEnchantableBE enchantableBE)) return false;
-        return !enchantableBE.getEnchantments().isEmpty();
+        return blockEntity instanceof IEnchantableBE enchantable && !enchantable.getEnchantments().isEmpty();
     }
 }
