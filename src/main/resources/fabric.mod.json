@@ -4,7 +4,13 @@
   "version": "${version}",
   "name": "Enchantable Block Entities",
   "description": "A Library to help with Enchanting Block Entities",
+  "icon": "assets/enchantablebe/icon.png",
   "license": "MIT",
+  "custom": {
+    "modmenu": {
+      "badges": [ "library" ]
+    }
+  },
   "environment": "*",
   "mixins": [
     "enchantable-be.mixins.json",
